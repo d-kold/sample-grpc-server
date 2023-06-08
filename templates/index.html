@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Electricity Consumption</title>
+    </head>
+    <body>
+        <h1>Electricity Consumption Data</h1>
+        <table>
+            <tr>
+                <th>Timestamp</th>
+                <th>Usage</th>
+            </tr>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.timestamp }}</td>
+                <td>{{ record.usage }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

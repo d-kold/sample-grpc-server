@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service ElectricityService {
+    rpc GetElectricityData(GetMeterUsageRequest) returns (ElectricityResponse);
+}
+
+message GetMeterUsageRequest {}
+
+message ElectricityResponse {
+    repeated MeterUsageRecord records = 1;
+}
+
+message MeterUsageRecord {
+    string timestamp = 1;
+    double usage = 2;
+}
